@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carlos Magno | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Carlos Magno, estudante de Engenharia de Software.">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonte Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">CM</div>
+
+  <nav class="nav">
+    <a href="#hero">Início</a>
+    <a href="#about">Sobre</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#projects">Projetos</a>
+    <a href="#contact">Contato</a>
+  </nav>
+
+  <div class="topbar-actions">
+    <a
+      href="img/curriculo-carlos-magno.pdf"
+      class="btn cv-link"
+      target="_blank"
+      rel="noopener"
+    >
+      📁 Currículo
+    </a>
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Engenharia de Software</p>
+      <h1>Olá, eu sou o <span>Carlos Magno</span>.</h1>
+      <p class="hero-subtitle">
+        Estudante de Engenharia de Software (4º período), com experiência prática em
+        JavaScript, Flutter, bancos de dados e jogos 3D na Unity.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">Ver projetos</a>
+        <a href="#contact" class="btn ghost">Fale comigo</a>
+      </div>
+      <div class="hero-tags">
+        <span>JavaScript</span>
+        <span>Flutter & Dart</span>
+        <span>Unity & C#</span>
+        <span>MySQL & Firebase</span>
+      </div>
+    </div>
+   <div class="hero-photo-card">
+  <div class="hero-photo-placeholder">
+    <img
+      src="img/foto-carlos-magno.jpg"
+      alt="Foto de Carlos Magno"
+      class="hero-photo-img"
+    />
+  </div>
+  <p class="hero-photo-caption">
+    Carlos Magno<br />
+    <span>Estudante de Engenharia de Software</span>
+  </p>
+</div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section id="about" class="section">
+    <div class="section-header">
+      <h2>Sobre mim</h2>
+      <p>Quem eu sou, o que estudo e como posso contribuir.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text card">
+        <p>
+          Estudante de <strong>Engenharia de Software</strong>, atualmente no 4º período, com
+          experiência em front-end, mobile e jogos digitais. Participei de projetos
+          acadêmicos e pessoais utilizando <strong>JavaScript, Flutter, Unity, MySQL e Firebase</strong>,
+          sempre aplicando boas práticas de programação e design.
+        </p>
+        <p>
+          Tenho perfil <strong>autodidata</strong>, gosto de aprender novas tecnologias e busco
+          constantemente evoluir minhas habilidades técnicas e contribuir com soluções
+          criativas, funcionais e focadas em experiência do usuário.
+        </p>
+      </div>
+      <div class="about-side">
+        <div class="about-item card">
+          <h3>Formação</h3>
+          <p><strong>Bacharelado em Engenharia de Software</strong></p>
+          <p>Universidade Evangélica de Goiás</p>
+          <p>2024 – 2027 (em andamento)</p>
+          <p>Atualmente no 4º período.</p>
+        </div>
+        <div class="about-item card">
+          <h3>Idiomas</h3>
+          <ul class="pill-list">
+            <li>Português – Nativo</li>
+            <li>Inglês – Básico</li>
+            <li>Espanhol – Básico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="skills" class="section section-alt">
+    <div class="section-header">
+      <h2>Habilidades</h2>
+      <p>Soft skills e tecnologias que utilizo no dia a dia.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Competências interpessoais</h3>
+        <ul class="tag-list" id="softSkillsList">
+          <!-- preenchido via JavaScript -->
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tecnologias</h3>
+        <ul class="tag-list" id="techSkillsList">
+          <!-- preenchido via JavaScript -->
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Metodologias e práticas</h3>
+        <ul class="tag-list">
+          <li>Scrum</li>
+          <li>Kanban</li>
+          <li>Git & GitHub</li>
+          <li>Boas práticas de código</li>
+          <li>Trabalho colaborativo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Projetos</h2>
+      <p>Alguns projetos acadêmicos e pessoais em que tive atuação.</p>
+    </div>
+
+    <div id="projectsGrid" class="projects-grid">
+      <!-- preenchido via JavaScript -->
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact" class="section section-alt">
+    <div class="section-header">
+      <h2>Contato</h2>
+      <p>Quer conversar sobre uma vaga, projeto ou estágio?</p>
+    </div>
+    <div class="contact-card card">
+      <p>
+        Estou aberto a oportunidades como estagiário ou desenvolvedor júnior em
+        desenvolvimento web, mobile ou jogos.
+      </p>
+      <div class="contact-row">
+        <span>📞</span>
+        <a href="tel:+5562996963978">(62) 99696-3978</a>
+      </div>
+      <div class="contact-row">
+        <span>📧</span>
+        <a href="mailto:carlosmagnos1005@gmail.com">carlosmagnos1005@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span>💼</span>
+        <a href="https://br.linkedin.com/in/carlos-magno-silva-7720232ba?trk=people-guest_people_search-card" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+      </div>
+      <div class="contact-row">
+        <span>👨‍💻</span>
+        <a href="https://github.com/CarlosMagn0" target="_blank" rel="noopener">
+          GitHub 
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlos Magno — Portfólio.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
