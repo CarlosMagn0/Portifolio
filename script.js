@@ -22,7 +22,8 @@ const techSkills = [
 ];
 
 // 🧾 Projetos
-// Dica: coloque os prints do jogo em uma pasta "img" e ajuste o caminho em "image".
+// 🧾 Projetos
+// Dica: coloque os prints em uma pasta "img" e ajuste o caminho em "image".
 const projects = [
   {
     title: 'Missão Dengue Zero – Jogo 3D',
@@ -31,9 +32,19 @@ const projects = [
       'Jogo 3D desenvolvido em Unity com foco em educação e conscientização sobre a Dengue. Inclui mecânicas de exploração, interação com NPCs e sistema de missões.',
     role: 'Game Developer',
     link: 'https://play.google.com/store/apps/details?id=com.MindEleve.MissaoDengueZero',
-    // 👉 Coloque aqui o caminho da imagem do jogo no seu projeto:
-    // por exemplo, salve um print como "img/missao-dengue-zero.png"
+    // salve um print do jogo na pasta img, por exemplo:
+    // img/missao-dengue-zero.png
     image: 'img/missao-dengue-zero.png',
+  },
+  {
+    title: 'DengCheck – App de combate à dengue',
+    tags: ['Android', 'iOS', 'Mobile', 'Flutter', 'Google Play'],
+    description:
+      'Aplicativo mobile focado em prevenção e monitoramento de focos de dengue, desenvolvido em equipe como solução de apoio à saúde pública.',
+    role: 'Mobile Developer (colaboração)',
+    link: 'https://play.google.com/store/apps/details?id=com.mycompany.dengcheck',
+    // print da tela do app
+    image: 'img/dengcheck.png',
   },
   {
     title: 'Aplicativo Mobile em Flutter',
@@ -52,14 +63,16 @@ const projects = [
     link: '#',
   },
   {
-    title: 'Sistema com MySQL',
+    title: 'Sistema acadêmico com MySQL',
     tags: ['MySQL', 'Modelagem de dados'],
     description:
-      'Projeto acadêmico com modelagem de banco relacional, normalização e construção de consultas SQL para relatórios.',
-    role: 'Database Developer',
-    link: '#',
+      'Projeto acadêmico com modelagem de banco relacional, normalização e construção de consultas SQL para relatórios. Código privado por conter dados internos de estudo.',
+    role: 'Database Developer (projeto acadêmico)',
+    link: null,           // 👈 sem link
+    visibility: 'private' // 👈 marca como projeto privado
   },
 ];
+
 
 // ===== Funções de render =====
 function renderList(list, elementId) {
@@ -119,18 +132,27 @@ function renderProjects() {
     const role = document.createElement('span');
     role.textContent = project.role;
 
-    const link = document.createElement('a');
-    link.href = project.link || '#';
-    link.target =
-      project.link && project.link !== '#' ? '_blank' : '_self';
-    link.rel = 'noopener';
-    link.textContent =
-      project.link && project.link !== '#'
-        ? 'Ver na Google Play ↗'
-        : 'Ver projeto';
-
     footer.appendChild(role);
-    footer.appendChild(link);
+
+    // Link / status
+    if (project.link && project.link !== '#') {
+      const link = document.createElement('a');
+      link.href = project.link;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Ver na Google Play ↗';
+      footer.appendChild(link);
+    } else if (project.visibility === 'private') {
+      const privateLabel = document.createElement('span');
+      privateLabel.className = 'project-private';
+      privateLabel.textContent = 'Código privado';
+      footer.appendChild(privateLabel);
+    } else if (project.link === '#') {
+      const soon = document.createElement('span');
+      soon.className = 'project-private';
+      soon.textContent = 'Em breve';
+      footer.appendChild(soon);
+    }
 
     // Monta o card
     card.appendChild(chipRow);
@@ -141,6 +163,7 @@ function renderProjects() {
     grid.appendChild(card);
   });
 }
+
 
 // ===== Reveal on scroll =====
 function handleScrollReveal() {

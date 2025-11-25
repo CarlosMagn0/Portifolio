@@ -268,7 +268,7 @@ body {
 }
 
 .hero-photo-card::after {
-  content: 'Disponível para estágio';
+  content: 'Disponível para Propostas';
   position: absolute;
   inset: 20px -14px auto auto;
   border-radius: 999px;
