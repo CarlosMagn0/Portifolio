@@ -42,25 +42,27 @@ const projects = [
     description:
       'Aplicativo mobile focado em prevenção e monitoramento de focos de dengue, desenvolvido em equipe como solução de apoio à saúde pública.',
     role: 'Mobile Developer (colaboração)',
-    link: 'https://play.google.com/store/apps/details?id=com.mycompany.dengcheck',
+    link: 'https://play.google.com/store/apps/details?id=com.dengue.dengueapp1',
     // print da tela do app
     image: 'img/dengcheck.png',
   },
   {
-    title: 'Aplicativo Mobile em Flutter',
-    tags: ['Flutter', 'Dart', 'Mobile'],
-    description:
-      'Aplicativo mobile multiplataforma com interface moderna, focado em boas práticas de organização de código e experiência do usuário.',
-    role: 'Mobile Developer',
-    link: '#', // troque pelo link do GitHub ou loja quando tiver
+  title: 'Recomeçar – Plataforma Mobile de Acompanhamento',
+  tags: ['Flutter', 'Dart', 'Android', 'UI/UX'],
+  description:
+    'Aplicativo mobile desenvolvido em Flutter com foco em performance, usabilidade e design centrado no usuário. Possui interface moderna, navegação fluida e estrutura bem organizada, oferecendo uma experiência eficiente para acompanhamento e interação ao longo da jornada do usuário.',
+  role: 'Mobile Developer',
+  link: 'https://play.google.com/store/apps/details?id=com.mindeleve.recomecarapp',
+  image: 'img/recomecar.webp',
   },
-  {
-    title: 'Dashboard Web com JavaScript',
-    tags: ['JavaScript', 'HTML', 'CSS'],
-    description:
-      'Dashboard web responsivo para visualização de métricas, com componentes reutilizáveis, filtros dinâmicos e layout moderno.',
-    role: 'Front-end Developer',
-    link: '#',
+ {
+  title: 'TaskBoard – Sistema Interativo de Produtividade',
+  tags: ['JavaScript', 'HTML', 'CSS', 'UX/UI'],
+  description:
+    'Sistema web interativo para gestão de tarefas com interface moderna e responsiva. Implementa funcionalidades completas de CRUD, filtros inteligentes, busca em tempo real e persistência de dados via localStorage. O projeto destaca boas práticas de desenvolvimento front-end, organização de código e foco em experiência do usuário.',
+  role: 'Front-end Developer',
+  link: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
+  image: 'img/taskboard.png',
   },
   {
     title: 'Sistema acadêmico com MySQL',
