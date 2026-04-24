@@ -65,13 +65,22 @@ const projects = [
   image: 'img/taskboard.png',
   },
   {
+  title: 'MsTech – Site Profissional de Serviços de TI',
+  tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
+  description:
+    'Site institucional desenvolvido para a MsTech, focado na apresentação de serviços de tecnologia e conversão de clientes. Possui layout moderno, responsividade completa para dispositivos móveis, seções estratégicas de apresentação, serviços, contato direto via WhatsApp e otimização para experiência do usuário. O projeto evidencia habilidades em desenvolvimento front-end, design visual e construção de interfaces voltadas para negócios reais.',
+  role: 'Front-end Developer & UI Designer',
+  link: 'https://ms-tech-ten.vercel.app/',
+  image: 'img/mstech.jpeg',
+  },
+  {
     title: 'Sistema acadêmico com MySQL',
     tags: ['MySQL', 'Modelagem de dados'],
     description:
       'Projeto acadêmico com modelagem de banco relacional, normalização e construção de consultas SQL para relatórios. Código privado por conter dados internos de estudo.',
     role: 'Database Developer (projeto acadêmico)',
-    link: null,           // 👈 sem link
-    visibility: 'private' // 👈 marca como projeto privado
+    link: null,           
+    visibility: 'private' 
   },
 ];
 
