@@ -74,6 +74,15 @@ const projects = [
   image: 'img/mstech.jpeg',
   },
   {
+  title: 'MG Transportes – Landing Page Institucional',
+  tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
+  description:
+    'Landing page desenvolvida para a MG Transportes com foco em apresentação institucional, credibilidade da marca e captação de clientes. O projeto conta com design moderno, navegação intuitiva, layout totalmente responsivo, seções estratégicas de serviços, diferenciais da empresa e canais de contato para conversão de leads. Desenvolvido com foco em performance, experiência do usuário e presença digital profissional.',
+  role: 'Front-end Developer & UI Designer',
+  link: 'https://mg-transportes.vercel.app/',
+  image: 'img/mg-transportes.png',
+},
+  {
     title: 'Sistema acadêmico com MySQL',
     tags: ['MySQL', 'Modelagem de dados'],
     description:
