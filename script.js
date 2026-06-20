@@ -86,7 +86,7 @@ const projects = [
       'App mobile para pequenos empreendedores gerenciarem produtos, estoque e desempenho financeiro: receita, lucro líquido, margem em tempo real, alertas de estoque crítico e simulações de precificação.',
     role: 'Full Stack Mobile Developer',
     link: 'https://github.com/CarlosMagn0/Gerenciamento',
-    image: 'img/lumio.png',
+    image: 'img/logo-lumio.png',
     featured: true,
   },
   {
