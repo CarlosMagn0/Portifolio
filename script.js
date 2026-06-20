@@ -25,6 +25,17 @@ const techSkills = [
 ];
 
 const projects = [
+   {
+    title: 'Lumio – Gestão Inteligente de Produtos e Finanças',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Mobile App'],
+    description:
+      'App mobile para pequenos empreendedores gerenciarem produtos, estoque e desempenho financeiro: receita, lucro líquido, margem em tempo real, alertas de estoque crítico e simulações de precificação.',
+    role: 'Full Stack Mobile Developer',
+    link: 'https://github.com/CarlosMagn0/Gerenciamento',
+    image: 'img/logo-lumio.png',
+    featured: true,
+  },
+
   {
     title: 'Missão Dengue Zero – Jogo 3D',
     tags: ['Unity', 'C#', 'Android', 'Google Play'],
@@ -52,15 +63,7 @@ const projects = [
     link: 'https://play.google.com/store/apps/details?id=com.mindeleve.recomecarapp',
     image: 'img/recomecar.webp',
   },
-  {
-    title: 'TaskBoard – Sistema Interativo de Produtividade',
-    tags: ['JavaScript', 'HTML', 'CSS', 'UX/UI'],
-    description:
-      'Sistema web interativo para gestão de tarefas com CRUD completo, filtros inteligentes, busca em tempo real e persistência de dados via localStorage.',
-    role: 'Front-end Developer',
-    link: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
-    image: 'img/taskboard.png',
-  },
+ 
   {
     title: 'MsTech – Site Profissional de Serviços de TI',
     tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
@@ -79,16 +82,17 @@ const projects = [
     link: 'https://mg-transportes.vercel.app/',
     image: 'img/mg-transportes.png',
   },
-  {
-    title: 'Lumio – Gestão Inteligente de Produtos e Finanças',
-    tags: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Mobile App'],
+ 
+   {
+    title: 'TaskBoard – Sistema Interativo de Produtividade',
+    tags: ['JavaScript', 'HTML', 'CSS', 'UX/UI'],
     description:
-      'App mobile para pequenos empreendedores gerenciarem produtos, estoque e desempenho financeiro: receita, lucro líquido, margem em tempo real, alertas de estoque crítico e simulações de precificação.',
-    role: 'Full Stack Mobile Developer',
-    link: 'https://github.com/CarlosMagn0/Gerenciamento',
-    image: 'img/logo-lumio.png',
-    featured: true,
+      'Sistema web interativo para gestão de tarefas com CRUD completo, filtros inteligentes, busca em tempo real e persistência de dados via localStorage.',
+    role: 'Front-end Developer',
+    link: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
+    image: 'img/taskboard.png',
   },
+  
   {
     title: 'Sistema acadêmico com MySQL',
     tags: ['MySQL', 'Modelagem de dados'],

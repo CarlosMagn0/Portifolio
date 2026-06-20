@@ -238,7 +238,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== HERO ===== */
+
 /* ===== HERO ===== */
 
 .hero {
@@ -357,14 +357,16 @@ body {
 
 .hero-visual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* empurra o card pra direita */
   align-items: center;
 }
 
 .hero-photo-card {
   position: relative;
   width: 100%;
-  max-width: 380px; /* aumentei */
+  max-width: 380px;
+  margin-left: auto; /* reforça o deslocamento para a direita */
+  margin-right: 40px; /* ajuste fino: aproxima do local marcado */
 }
 
 .hero-photo-placeholder {
