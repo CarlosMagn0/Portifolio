@@ -2,182 +2,618 @@
 // DADOS DO PORTFÓLIO
 // ========================================================================
 
-const softSkills = [
-  'Trabalho em equipe',
-  'Liderança',
-  'Pensamento criativo',
-  'Resolução de problemas',
-  'Comunicação',
-  'Proatividade',
+const contactLinks = {
+  github: 'https://github.com/CarlosMagn0',
+  linkedin: 'https://br.linkedin.com/in/carlos-magno-silva-7720232ba',
+  whatsapp: 'https://wa.me/5562996963978',
+  email: 'mailto:carlosmagnos1005@gmail.com',
+  cv: 'img/curriculo-carlos-magno.pdf',
+};
+
+const techIcons = {
+  React: 'https://cdn.simpleicons.org/react/61DAFB',
+  'Next.js': 'https://cdn.simpleicons.org/nextdotjs/FFFFFF',
+  TypeScript: 'https://cdn.simpleicons.org/typescript/3178C6',
+  JavaScript: 'https://cdn.simpleicons.org/javascript/F7DF1E',
+  HTML5: 'https://cdn.simpleicons.org/html5/E34F26',
+  CSS3: 'https://cdn.simpleicons.org/css3/1572B6',
+  'Node.js': 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
+  Firebase: 'https://cdn.simpleicons.org/firebase/FFCA28',
+  Flutter: 'https://cdn.simpleicons.org/flutter/02569B',
+  Dart: 'https://cdn.simpleicons.org/dart/0175C2',
+  MySQL: 'https://cdn.simpleicons.org/mysql/4479A1',
+  Git: 'https://cdn.simpleicons.org/git/F05032',
+  GitHub: 'https://cdn.simpleicons.org/github/FFFFFF',
+  Vercel: 'https://cdn.simpleicons.org/vercel/FFFFFF',
+  Figma: 'https://cdn.simpleicons.org/figma/F24E1E',
+  Unity: 'https://cdn.simpleicons.org/unity/FFFFFF',
+};
+
+const featuredTech = [
+  { name: 'React', icon: techIcons.React },
+  { name: 'Next.js', icon: techIcons['Next.js'] },
+  { name: 'Node.js', icon: techIcons['Node.js'] },
+  { name: 'Flutter', icon: techIcons.Flutter },
+  { name: 'Firebase', icon: techIcons.Firebase },
+  { name: 'TypeScript', icon: techIcons.TypeScript },
+  { name: 'JavaScript', icon: techIcons.JavaScript },
+  { name: 'GitHub', icon: techIcons.GitHub },
+  { name: 'MySQL', icon: techIcons.MySQL },
+  { name: 'HTML5', icon: techIcons.HTML5 },
+  { name: 'CSS3', icon: techIcons.CSS3 },
+  { name: 'Git', icon: techIcons.Git },
 ];
 
-// Tecnologias com nível de domínio (0-100) — ajuste como preferir
-const techSkills = [
-  { name: 'JavaScript', level: 85 },
-  { name: 'Flutter & Dart', level: 88 },
-  { name: 'HTML & CSS', level: 90 },
-  { name: 'Firebase & Firestore', level: 80 },
-  { name: 'Unity & C#', level: 70 },
-  { name: 'MySQL', level: 75 },
-  { name: 'Hive (banco local)', level: 78 },
-  { name: 'Git & GitHub', level: 82 },
-  { name: 'Node.js', level: 60 },
+const skillCategories = [
+  {
+    title: 'Frontend',
+    description: 'Interfaces responsivas, acessíveis e orientadas à experiência do usuário.',
+    skills: [
+      { name: 'React', level: 82 },
+      { name: 'Next.js', level: 72 },
+      { name: 'TypeScript', level: 74 },
+      { name: 'JavaScript', level: 86 },
+      { name: 'HTML5', level: 92 },
+      { name: 'CSS3', level: 90 },
+    ],
+  },
+  {
+    title: 'Backend',
+    description: 'APIs, regras de negócio, autenticação e integrações com banco de dados.',
+    skills: [
+      { name: 'Node.js', level: 70 },
+      { name: 'APIs REST', level: 76 },
+      { name: 'Autenticação', level: 72 },
+      { name: 'Arquitetura', level: 74 },
+    ],
+  },
+  {
+    title: 'Mobile',
+    description: 'Aplicações mobile com foco em performance, usabilidade e publicação.',
+    skills: [
+      { name: 'Flutter', level: 88 },
+      { name: 'Dart', level: 86 },
+      { name: 'Android', level: 78 },
+      { name: 'UI Mobile', level: 82 },
+    ],
+  },
+  {
+    title: 'Banco de Dados',
+    description: 'Modelagem, consultas, persistência local e dados em tempo real.',
+    skills: [
+      { name: 'Firebase', level: 82 },
+      { name: 'Cloud Firestore', level: 80 },
+      { name: 'MySQL', level: 76 },
+      { name: 'Hive', level: 78 },
+    ],
+  },
+  {
+    title: 'Ferramentas',
+    description: 'Fluxo de versionamento, deploy, prototipação e colaboração.',
+    skills: [
+      { name: 'Git', level: 84 },
+      { name: 'GitHub', level: 84 },
+      { name: 'Vercel', level: 78 },
+      { name: 'Figma', level: 72 },
+    ],
+  },
+  {
+    title: 'Cloud',
+    description: 'Hospedagem, serviços gerenciados, autenticação e entrega contínua.',
+    skills: [
+      { name: 'Firebase Hosting', level: 78 },
+      { name: 'Firebase Auth', level: 74 },
+      { name: 'Firestore Rules', level: 72 },
+      { name: 'Deploy Web', level: 82 },
+    ],
+  },
+  {
+    title: 'Metodologias',
+    description: 'Organização do trabalho, qualidade e colaboração em ciclos curtos.',
+    skills: [
+      { name: 'Scrum', level: 76 },
+      { name: 'Kanban', level: 78 },
+      { name: 'Clean Code', level: 80 },
+      { name: 'Code Review', level: 72 },
+    ],
+  },
 ];
 
 const projects = [
-   {
+  {
+    id: 'lumio',
     title: 'Lumio – Gestão Inteligente de Produtos e Finanças',
+    category: 'Mobile / Full Stack',
+    role: 'Full Stack Mobile Developer',
+    year: '2026',
+    status: 'Em evolução',
     tags: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Mobile App'],
     description:
-      'App mobile para pequenos empreendedores gerenciarem produtos, estoque e desempenho financeiro: receita, lucro líquido, margem em tempo real, alertas de estoque crítico e simulações de precificação.',
-    role: 'Full Stack Mobile Developer',
-    link: 'https://github.com/CarlosMagn0/Gerenciamento',
+      'App mobile para pequenos empreendedores gerenciarem produtos, estoque e desempenho financeiro com receita, lucro líquido, margem, alertas e simulações de precificação.',
+    problem:
+      'Pequenos empreendedores precisam controlar estoque, margem e precificação sem depender de planilhas frágeis ou sistemas complexos.',
+    solution:
+      'Criei um aplicativo mobile com fluxo simples, dados centralizados no Firebase e telas focadas em indicadores que apoiam decisões rápidas do negócio.',
+    architecture: [
+      'Aplicação Flutter com componentes reutilizáveis e fluxo orientado a telas de gestão.',
+      'Firebase e Cloud Firestore para persistência, sincronização e estrutura de dados em tempo real.',
+      'Cálculos locais para margem, lucro líquido, estoque crítico e simulações de preço.',
+    ],
+    challenges: [
+      'Modelar dados financeiros de forma clara para usuários não técnicos.',
+      'Criar uma interface mobile densa sem sacrificar legibilidade.',
+      'Organizar regras de cálculo para manter consistência entre telas.',
+    ],
+    learnings: [
+      'Melhor separação entre interface, regras de negócio e persistência.',
+      'Importância de indicadores simples para tomada de decisão.',
+      'Uso mais estratégico do Firebase em produtos mobile.',
+    ],
+    metrics: ['Estoque crítico', 'Margem em tempo real', 'Simulação de precificação'],
+    github: 'https://github.com/CarlosMagn0/Gerenciamento',
+    demo: null,
     image: 'img/logo-lumio.png',
+    gallery: ['img/logo-lumio.png'],
     featured: true,
   },
-
   {
+    id: 'missao-dengue-zero',
     title: 'Missão Dengue Zero – Jogo 3D',
+    category: 'Game / Educação',
+    role: 'Game Developer',
+    year: '2024',
+    status: 'Publicado',
     tags: ['Unity', 'C#', 'Android', 'Google Play'],
     description:
-      'Jogo 3D desenvolvido em Unity com foco em educação e conscientização sobre a Dengue. Inclui mecânicas de exploração, interação com NPCs e sistema de missões.',
-    role: 'Game Developer',
-    link: 'https://play.google.com/store/apps/details?id=com.MindEleve.MissaoDengueZero',
+      'Jogo 3D desenvolvido em Unity com foco em educação e conscientização sobre a dengue, com exploração, NPCs, missões e interação em ambiente mobile.',
+    problem:
+      'Campanhas educativas sobre dengue podem ter baixa retenção quando apresentadas apenas em formatos passivos.',
+    solution:
+      'Transformei o conteúdo de prevenção em uma experiência interativa, usando missões e exploração para reforçar comportamentos importantes.',
+    architecture: [
+      'Projeto Unity para Android com cenas, missões, colisões e interações com NPCs.',
+      'Scripts em C# para controle de objetivos, fluxo de jogador e feedback visual.',
+      'Publicação na Google Play com foco em acesso mobile.',
+    ],
+    challenges: [
+      'Equilibrar educação e jogabilidade sem tornar a experiência cansativa.',
+      'Organizar interações de NPCs e missões em um fluxo simples.',
+      'Ajustar performance para dispositivos Android.',
+    ],
+    learnings: [
+      'Planejamento de mecânicas educativas em jogos 3D.',
+      'Otimização e empacotamento para publicação mobile.',
+      'Comunicação entre design, código e objetivos pedagógicos.',
+    ],
+    metrics: ['Publicado na Google Play', 'Experiência 3D', 'Tema de impacto social'],
+    github: null,
+    demo: 'https://play.google.com/store/apps/details?id=com.MindEleve.MissaoDengueZero',
+    demoLabel: 'Google Play',
     image: 'img/missao-dengue-zero.png',
+    gallery: ['img/missao-dengue-zero.png'],
   },
   {
+    id: 'dengcheck',
     title: 'DengCheck – App de combate à dengue',
-    tags: ['Android', 'iOS', 'Mobile', 'Flutter', 'Google Play'],
+    category: 'Mobile / Saúde pública',
+    role: 'Mobile Developer (colaboração)',
+    year: '2024',
+    status: 'Publicado',
+    tags: ['Flutter', 'Android', 'iOS', 'Mobile', 'Google Play'],
     description:
       'Aplicativo mobile focado em prevenção e monitoramento de focos de dengue, desenvolvido em equipe como solução de apoio à saúde pública.',
-    role: 'Mobile Developer (colaboração)',
-    link: 'https://play.google.com/store/apps/details?id=com.dengue.dengueapp1',
+    problem:
+      'O combate à dengue depende de identificação, orientação e acompanhamento recorrente de possíveis focos.',
+    solution:
+      'Participei do desenvolvimento de um app mobile com experiência simples para apoiar ações de prevenção e registro de informações relevantes.',
+    architecture: [
+      'Aplicação mobile com Flutter e fluxo centrado em ações rápidas.',
+      'Estrutura visual pensada para uso direto em campo.',
+      'Organização do projeto em equipe com responsabilidades de desenvolvimento mobile.',
+    ],
+    challenges: [
+      'Trabalhar em colaboração mantendo consistência de interface.',
+      'Criar uma experiência simples para um problema de utilidade pública.',
+      'Ajustar o app para publicação e uso em ambiente mobile.',
+    ],
+    learnings: [
+      'Colaboração em projeto de software com impacto social.',
+      'Atenção à usabilidade em apps de serviço público.',
+      'Construção de telas e fluxos em Flutter.',
+    ],
+    metrics: ['App publicado', 'Projeto em equipe', 'Foco em saúde pública'],
+    github: null,
+    demo: 'https://play.google.com/store/apps/details?id=com.dengue.dengueapp1',
+    demoLabel: 'Google Play',
     image: 'img/dengcheck.png',
+    gallery: ['img/dengcheck.png'],
   },
   {
+    id: 'recomecar',
     title: 'Recomeçar – Plataforma Mobile de Acompanhamento',
+    category: 'Mobile / UI',
+    role: 'Mobile Developer',
+    year: '2024',
+    status: 'Publicado',
     tags: ['Flutter', 'Dart', 'Android', 'UI/UX'],
     description:
-      'Aplicativo mobile desenvolvido em Flutter com foco em performance, usabilidade e design centrado no usuário, oferecendo uma experiência eficiente para acompanhamento ao longo da jornada do usuário.',
-    role: 'Mobile Developer',
-    link: 'https://play.google.com/store/apps/details?id=com.mindeleve.recomecarapp',
+      'Aplicativo mobile em Flutter com foco em performance, usabilidade e design centrado no usuário para acompanhamento de jornada.',
+    problem:
+      'Usuários precisam de acompanhamento claro e acessível em uma jornada que exige continuidade e orientação.',
+    solution:
+      'Desenvolvi telas mobile com organização visual, navegação simples e atenção à experiência em dispositivos Android.',
+    architecture: [
+      'Interface Flutter com componentes reutilizáveis.',
+      'Fluxos mobile pensados para reduzir fricção de navegação.',
+      'Camadas de UI organizadas para evolução do app.',
+    ],
+    challenges: [
+      'Manter clareza visual em telas com diferentes densidades de informação.',
+      'Garantir responsividade entre tamanhos de dispositivos.',
+      'Aprimorar percepção de fluidez no uso mobile.',
+    ],
+    learnings: [
+      'Construção de UI mobile com foco em jornada.',
+      'Boas práticas de organização visual no Flutter.',
+      'Importância de consistência entre telas.',
+    ],
+    metrics: ['App publicado', 'UI mobile', 'Experiência centrada no usuário'],
+    github: null,
+    demo: 'https://play.google.com/store/apps/details?id=com.mindeleve.recomecarapp',
+    demoLabel: 'Google Play',
     image: 'img/recomecar.webp',
+    gallery: ['img/recomecar.webp'],
   },
- 
   {
+    id: 'mstech',
     title: 'MsTech – Site Profissional de Serviços de TI',
+    category: 'Web / Institucional',
+    role: 'Front-end Developer & UI Designer',
+    year: '2025',
+    status: 'Online',
     tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
     description:
-      'Site institucional para a MsTech, com layout moderno, responsividade completa, seções estratégicas de serviços, contato via WhatsApp e foco em conversão de clientes.',
-    role: 'Front-end Developer & UI Designer',
-    link: 'https://ms-tech-ten.vercel.app/',
+      'Site institucional para empresa de TI, com layout moderno, responsividade, seções estratégicas, WhatsApp e foco em conversão de clientes.',
+    problem:
+      'A empresa precisava comunicar serviços de TI com clareza, credibilidade e canal direto de conversão.',
+    solution:
+      'Projetei e desenvolvi uma landing page objetiva, responsiva e visualmente alinhada a serviços profissionais de tecnologia.',
+    architecture: [
+      'HTML semântico com seções orientadas a conversão.',
+      'CSS responsivo com hierarquia visual e componentes reutilizáveis.',
+      'JavaScript para interações leves e navegação fluida.',
+    ],
+    challenges: [
+      'Equilibrar visual moderno com leitura rápida dos serviços.',
+      'Criar responsividade consistente em desktop e mobile.',
+      'Direcionar o usuário para contato sem poluir a interface.',
+    ],
+    learnings: [
+      'Estruturação de landing pages para aquisição de clientes.',
+      'Atenção a CTA, hierarquia e prova de serviço.',
+      'Refinamento de UI para negócios locais.',
+    ],
+    metrics: ['Site online', 'Contato via WhatsApp', 'Layout responsivo'],
+    github: null,
+    demo: 'https://ms-tech-ten.vercel.app/',
+    demoLabel: 'Demo',
     image: 'img/mstech.jpeg',
+    gallery: ['img/mstech.jpeg'],
   },
   {
+    id: 'mg-transportes',
     title: 'MG Transportes – Landing Page Institucional',
+    category: 'Web / Landing Page',
+    role: 'Front-end Developer & UI Designer',
+    year: '2025',
+    status: 'Online',
     tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
     description:
-      'Landing page institucional com design moderno, navegação intuitiva, layout totalmente responsivo e canais de contato para conversão de leads.',
-    role: 'Front-end Developer & UI Designer',
-    link: 'https://mg-transportes.vercel.app/',
+      'Landing page institucional com design moderno, navegação intuitiva, layout responsivo e canais de contato para conversão de leads.',
+    problem:
+      'A marca precisava apresentar serviços de transporte com confiança e facilitar pedidos de orçamento.',
+    solution:
+      'Criei uma página responsiva com comunicação direta, CTAs visíveis e estrutura adequada para conversão.',
+    architecture: [
+      'HTML semântico para SEO e leitura clara.',
+      'CSS responsivo com foco em navegação mobile.',
+      'JavaScript para interações simples e experiência fluida.',
+    ],
+    challenges: [
+      'Transmitir confiança com poucos elementos visuais.',
+      'Manter a página leve e rápida.',
+      'Organizar informação para usuários que chegam pelo celular.',
+    ],
+    learnings: [
+      'Design de páginas comerciais orientadas a leads.',
+      'Importância de contraste, CTA e escaneabilidade.',
+      'Refinamento de seções institucionais responsivas.',
+    ],
+    metrics: ['Landing page online', 'Foco em leads', 'Responsividade completa'],
+    github: null,
+    demo: 'https://mg-transportes.vercel.app/',
+    demoLabel: 'Demo',
     image: 'img/mg-transportes.png',
+    gallery: ['img/mg-transportes.png'],
   },
- 
-   {
-    title: 'TaskBoard – Sistema Interativo de Produtividade',
-    tags: ['JavaScript', 'HTML', 'CSS', 'UX/UI'],
-    description:
-      'Sistema web interativo para gestão de tarefas com CRUD completo, filtros inteligentes, busca em tempo real e persistência de dados via localStorage.',
-    role: 'Front-end Developer',
-    link: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
-    image: 'img/taskboard.png',
-  },
-  
   {
-    title: 'Sistema acadêmico com MySQL',
-    tags: ['MySQL', 'Modelagem de dados'],
+    id: 'taskboard',
+    title: 'TaskBoard – Sistema Interativo de Produtividade',
+    category: 'Web App / Produtividade',
+    role: 'Front-end Developer',
+    year: '2025',
+    status: 'Online',
+    tags: ['JavaScript', 'HTML', 'CSS', 'CRUD', 'LocalStorage'],
     description:
-      'Projeto acadêmico com modelagem de banco relacional, normalização e construção de consultas SQL para relatórios. Código privado por conter dados internos de estudo.',
+      'Sistema web para gestão de tarefas com CRUD completo, filtros inteligentes, busca em tempo real e persistência via localStorage.',
+    problem:
+      'Usuários precisam organizar tarefas de forma rápida sem cadastro, banco externo ou interface complexa.',
+    solution:
+      'Desenvolvi um web app interativo com CRUD, filtros e persistência local, priorizando velocidade e clareza na rotina.',
+    architecture: [
+      'JavaScript puro para estado, filtros, busca e manipulação do DOM.',
+      'LocalStorage para persistência sem backend.',
+      'CSS responsivo para uso em desktop e mobile.',
+    ],
+    challenges: [
+      'Controlar estado e filtros mantendo o código simples.',
+      'Evitar perda de dados com persistência local.',
+      'Criar uma UI útil para uso repetido.',
+    ],
+    learnings: [
+      'Organização de estado em JavaScript sem framework.',
+      'Boas práticas de CRUD e persistência no navegador.',
+      'Feedback visual para produtividade.',
+    ],
+    metrics: ['CRUD completo', 'Busca em tempo real', 'Persistência local'],
+    github: null,
+    demo: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
+    demoLabel: 'Demo',
+    image: 'img/taskboard.png',
+    gallery: ['img/taskboard.png'],
+  },
+  {
+    id: 'sistema-academico-mysql',
+    title: 'Sistema acadêmico com MySQL',
+    category: 'Banco de Dados',
     role: 'Database Developer (acadêmico)',
-    link: null,
+    year: '2024',
+    status: 'Código privado',
+    tags: ['MySQL', 'Modelagem de dados', 'SQL', 'Relatórios'],
+    description:
+      'Projeto acadêmico com modelagem de banco relacional, normalização e consultas SQL para relatórios. Código privado por conter dados internos de estudo.',
+    problem:
+      'O projeto exigia estruturar dados acadêmicos de forma consistente para consultas e relatórios.',
+    solution:
+      'Modelei o banco relacional, normalizei tabelas e construí consultas SQL para extrair informações úteis.',
+    architecture: [
+      'Modelo relacional com entidades, relacionamentos e chaves bem definidas.',
+      'Normalização para reduzir duplicidade e preservar integridade.',
+      'Consultas SQL para relatórios e análise de dados.',
+    ],
+    challenges: [
+      'Definir relacionamentos coerentes entre entidades.',
+      'Evitar redundância sem dificultar consultas.',
+      'Transformar requisitos acadêmicos em estrutura de banco.',
+    ],
+    learnings: [
+      'Modelagem relacional com foco em integridade.',
+      'Consultas SQL mais expressivas para relatórios.',
+      'Importância de documentação em projetos de dados.',
+    ],
+    metrics: ['Modelo relacional', 'Consultas SQL', 'Normalização'],
+    github: null,
+    demo: null,
     visibility: 'private',
+    image: null,
+    gallery: [],
   },
 ];
 
 const stats = [
-  { number: '8+', label: 'Projetos desenvolvidos' },
-  { number: '5º', label: 'Período em andamento' },
-  { number: '10+', label: 'Tecnologias dominadas' },
-  { number: '100%', label: 'Dedicação e aprendizado' },
+  { number: '+10', label: 'Projetos e entregas' },
+  { number: '+5', label: 'Tecnologias principais' },
+  { number: '100%', label: 'Responsivo e acessível' },
+  { number: 'GitHub', label: 'Ativo e em evolução' },
+];
+
+const timeline = [
+  {
+    period: '2024',
+    title: 'Início em Engenharia de Software',
+    description: 'Base em lógica, arquitetura, modelagem, banco de dados e construção de software.',
+  },
+  {
+    period: '2024',
+    title: 'Primeiro app Flutter',
+    description: 'Criação de interfaces mobile e evolução prática com Dart, Android e publicação.',
+  },
+  {
+    period: '2025',
+    title: 'Landing pages e projetos para clientes',
+    description: 'Entrega de sites responsivos com foco em conversão, presença digital e contato.',
+  },
+  {
+    period: '2025',
+    title: 'Projetos full stack e dados',
+    description: 'Integrações com Firebase, modelagem MySQL, CRUDs, dashboards e produtos próprios.',
+  },
+  {
+    period: 'Hoje',
+    title: 'Portfólio internacional e evolução contínua',
+    description: 'Foco em React, Next.js, Node.js, arquitetura, UX e experiências completas de produto.',
+  },
 ];
 
 const experience = [
   {
-    period: '2024 – atual',
-    title: 'Desenvolvedor Freelance',
+    title: 'Desenvolvimento Full Stack Mobile',
+    company: 'Projetos próprios',
+    period: '2025 – atual',
     description:
-      'Desenvolvimento de landing pages, sites institucionais e apps mobile para clientes reais (MG Transportes, MsTech) e projetos próprios (Lumio, DengCheck). Atuação completa: UI, front-end, back-end e integração com bancos de dados.',
+      'Criação de apps mobile com Flutter, Firebase e lógica de negócio aplicada, incluindo gestão financeira, estoque, simulações e experiência centrada no usuário.',
+    highlights: ['Flutter', 'Firebase', 'Cloud Firestore', 'Arquitetura mobile'],
   },
   {
+    title: 'Front-end Developer & UI Designer',
+    company: 'Projetos para clientes',
     period: '2024 – atual',
-    title: 'Estudante de Engenharia de Software',
     description:
-      'Cursando o 5º período na UniEVANGÉLICA, com participação em projetos acadêmicos de desenvolvimento web, mobile, modelagem de banco de dados e jogos digitais.',
+      'Desenvolvimento de sites institucionais e landing pages responsivas para negócios reais, com foco em clareza, contato via WhatsApp e conversão.',
+    highlights: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Vercel'],
   },
   {
+    title: 'Game Developer',
+    company: 'Projeto educacional publicado',
     period: '2023 – 2024',
-    title: 'Desenvolvimento de Jogos Educativos',
     description:
-      'Game Developer no projeto "Missão Dengue Zero", jogo 3D em Unity publicado na Google Play com foco em conscientização sobre saúde pública.',
+      'Desenvolvimento de jogo 3D em Unity com C#, missões, interação com NPCs e publicação na Google Play para conscientização sobre dengue.',
+    highlights: ['Unity', 'C#', 'Android', 'Google Play'],
+  },
+  {
+    title: 'Engenharia de Software',
+    company: 'UniEVANGÉLICA',
+    period: '2024 – 2027',
+    description:
+      'Formação com projetos acadêmicos envolvendo desenvolvimento web, mobile, modelagem de dados, banco relacional, metodologias e boas práticas.',
+    highlights: ['MySQL', 'Git', 'Scrum', 'Projetos acadêmicos'],
   },
 ];
 
 const typedRoles = [
-  'Desenvolvedor Full Stack',
-  'Mobile Developer (Flutter)',
-  'Game Developer (Unity)',
-  'Apaixonado por resolver problemas',
+  'React • Next.js • TypeScript',
+  'Flutter • Firebase • Mobile Apps',
+  'Node.js • APIs REST • Dashboards',
+  'Git • Arquitetura • Produtos reais',
 ];
 
+window.portfolioData = {
+  contactLinks,
+  featuredTech,
+  skillCategories,
+  projects,
+  stats,
+  timeline,
+  experience,
+};
+
 // ========================================================================
-// RENDER
+// HELPERS
 // ========================================================================
 
-function renderList(list, elementId) {
-  const ul = document.getElementById(elementId);
-  if (!ul) return;
-  list.forEach((item) => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    ul.appendChild(li);
+function createElement(tag, className, text) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (text) el.textContent = text;
+  return el;
+}
+
+function getIconForSkill(name) {
+  return techIcons[name] || techIcons[name.replace('Firebase ', '')] || null;
+}
+
+function getProjectDetailsUrl(project) {
+  return `project.html?id=${encodeURIComponent(project.id)}`;
+}
+
+function createTechIcon(name, src) {
+  const wrap = createElement('span', 'tech-icon');
+  if (src) {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.setAttribute('aria-hidden', 'true');
+    img.addEventListener('error', () => {
+      img.remove();
+      wrap.textContent = name.slice(0, 2).toUpperCase();
+      wrap.classList.add('tech-icon-fallback');
+    });
+    wrap.appendChild(img);
+  } else {
+    wrap.textContent = name.slice(0, 2).toUpperCase();
+    wrap.classList.add('tech-icon-fallback');
+  }
+  return wrap;
+}
+
+function createActionLink({ href, label, className = 'project-action', external = true, disabled = false, ariaLabel }) {
+  if (disabled || !href) {
+    const span = createElement('span', `${className} disabled`, label);
+    span.setAttribute('aria-disabled', 'true');
+    return span;
+  }
+
+  const link = createElement('a', className, label);
+  link.href = href;
+  if (external) {
+    link.target = '_blank';
+    link.rel = 'noopener';
+  }
+  if (ariaLabel) link.setAttribute('aria-label', ariaLabel);
+  return link;
+}
+
+// ========================================================================
+// RENDERIZAÇÃO
+// ========================================================================
+
+function renderTechStack() {
+  const grid = document.getElementById('techStackGrid');
+  if (!grid) return;
+
+  featuredTech.forEach((tech, index) => {
+    const item = createElement('div', 'tech-stack-item glass reveal');
+    item.style.setProperty('--delay', `${index * 40}ms`);
+    item.appendChild(createTechIcon(tech.name, tech.icon));
+    item.appendChild(createElement('span', null, tech.name));
+    grid.appendChild(item);
   });
 }
 
-function renderSkillBars() {
-  const wrap = document.getElementById('techSkillsList');
-  if (!wrap) return;
+function renderSkillCategories() {
+  const grid = document.getElementById('skillCategoriesGrid');
+  if (!grid) return;
 
-  techSkills.forEach((skill, index) => {
-    const row = document.createElement('div');
-    row.className = 'skill-row reveal';
-    row.style.setProperty('--delay', `${index * 60}ms`);
+  skillCategories.forEach((category, index) => {
+    const card = createElement('article', 'skill-category-card card glass reveal');
+    card.style.setProperty('--delay', `${index * 70}ms`);
 
-    const top = document.createElement('div');
-    top.className = 'skill-row-top';
-    top.innerHTML = `<span>${skill.name}</span><span class="skill-percent">${skill.level}%</span>`;
+    const header = createElement('div', 'skill-category-header');
+    const titleWrap = createElement('div');
+    titleWrap.appendChild(createElement('h3', null, category.title));
+    titleWrap.appendChild(createElement('p', null, category.description));
+    header.appendChild(titleWrap);
+    header.appendChild(createElement('span', 'skill-count', `${category.skills.length} skills`));
 
-    const track = document.createElement('div');
-    track.className = 'skill-track';
+    const list = createElement('div', 'skill-token-list');
+    category.skills.forEach((skill) => {
+      const item = createElement('div', 'skill-token');
+      const top = createElement('div', 'skill-token-top');
+      const label = createElement('span', 'skill-token-label');
+      label.appendChild(createTechIcon(skill.name, skill.icon || getIconForSkill(skill.name)));
+      label.appendChild(createElement('span', null, skill.name));
 
-    const fill = document.createElement('div');
-    fill.className = 'skill-fill';
-    fill.dataset.level = skill.level;
-    fill.style.width = '0%';
+      const level = createElement('span', 'skill-percent', `${skill.level}%`);
+      top.appendChild(label);
+      top.appendChild(level);
 
-    track.appendChild(fill);
-    row.appendChild(top);
-    row.appendChild(track);
-    wrap.appendChild(row);
+      const track = createElement('div', 'skill-track');
+      track.setAttribute('aria-label', `${skill.name}: ${skill.level}%`);
+      const fill = createElement('div', 'skill-fill');
+      fill.dataset.level = skill.level;
+      fill.style.width = '0%';
+      track.appendChild(fill);
+
+      item.appendChild(top);
+      item.appendChild(track);
+      list.appendChild(item);
+    });
+
+    card.appendChild(header);
+    card.appendChild(list);
+    grid.appendChild(card);
   });
 }
 
@@ -186,72 +622,74 @@ function renderProjects() {
   if (!grid) return;
 
   projects.forEach((project, index) => {
-    const card = document.createElement('article');
-    card.className = `card glass project-card reveal${project.featured ? ' featured' : ''}`;
-    card.style.setProperty('--delay', `${index * 80}ms`);
+    const card = createElement('article', `card glass project-card reveal${project.featured ? ' featured' : ''}`);
+    card.style.setProperty('--delay', `${index * 70}ms`);
 
-    const gradient = document.createElement('div');
-    gradient.className = 'project-gradient';
+    const gradient = createElement('div', 'project-gradient');
+    gradient.setAttribute('aria-hidden', 'true');
     card.appendChild(gradient);
 
     if (project.featured) {
-      const badge = document.createElement('span');
-      badge.className = 'project-featured-badge';
-      badge.textContent = '★ Destaque';
-      card.appendChild(badge);
+      card.appendChild(createElement('span', 'project-featured-badge', 'Destaque'));
     }
 
+    const imageWrap = createElement('div', 'project-thumb-wrap');
     if (project.image) {
-      const thumbWrap = document.createElement('div');
-      thumbWrap.className = 'project-thumb-wrap';
-      const thumb = document.createElement('img');
-      thumb.src = project.image;
-      thumb.alt = project.title;
-      thumb.className = 'project-thumb';
-      thumbWrap.appendChild(thumb);
-      card.appendChild(thumbWrap);
+      const image = document.createElement('img');
+      image.src = project.image;
+      image.alt = `Imagem do projeto ${project.title}`;
+      image.className = 'project-thumb';
+      image.loading = index < 2 ? 'eager' : 'lazy';
+      image.decoding = 'async';
+      imageWrap.appendChild(image);
+    } else {
+      const fallback = createElement('div', 'project-image-fallback');
+      fallback.appendChild(createElement('span', null, 'SQL'));
+      fallback.appendChild(createElement('small', null, 'Banco de Dados'));
+      imageWrap.appendChild(fallback);
     }
+    card.appendChild(imageWrap);
 
-    const chipRow = document.createElement('div');
-    chipRow.className = 'project-chip-row';
+    const meta = createElement('div', 'project-meta');
+    meta.appendChild(createElement('span', null, project.category));
+    meta.appendChild(createElement('span', null, project.status));
+    card.appendChild(meta);
+
+    const chipRow = createElement('div', 'project-chip-row');
     project.tags.forEach((tag) => {
-      const chip = document.createElement('span');
-      chip.className = 'project-chip';
-      chip.textContent = tag;
-      chipRow.appendChild(chip);
+      chipRow.appendChild(createElement('span', 'project-chip', tag));
     });
-
-    const title = document.createElement('h3');
-    title.textContent = project.title;
-
-    const desc = document.createElement('p');
-    desc.textContent = project.description;
-
-    const footer = document.createElement('div');
-    footer.className = 'project-footer';
-
-    const role = document.createElement('span');
-    role.textContent = project.role;
-    footer.appendChild(role);
-
-    if (project.link && project.link !== '#') {
-      const link = document.createElement('a');
-      link.href = project.link;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = 'Ver Projeto ↗';
-      footer.appendChild(link);
-    } else if (project.visibility === 'private') {
-      const privateLabel = document.createElement('span');
-      privateLabel.className = 'project-private';
-      privateLabel.textContent = 'Código privado';
-      footer.appendChild(privateLabel);
-    }
-
     card.appendChild(chipRow);
-    card.appendChild(title);
-    card.appendChild(desc);
-    card.appendChild(footer);
+
+    card.appendChild(createElement('h3', null, project.title));
+    card.appendChild(createElement('p', null, project.description));
+
+    const role = createElement('div', 'project-role');
+    role.appendChild(createElement('span', null, 'Meu papel'));
+    role.appendChild(createElement('strong', null, project.role));
+    card.appendChild(role);
+
+    const actions = createElement('div', 'project-actions');
+    actions.appendChild(createActionLink({
+      href: project.github,
+      label: project.github ? 'GitHub' : 'GitHub privado',
+      disabled: !project.github,
+      ariaLabel: `Abrir repositório do projeto ${project.title}`,
+    }));
+    actions.appendChild(createActionLink({
+      href: project.demo,
+      label: project.demoLabel || 'Demo',
+      disabled: !project.demo,
+      ariaLabel: `Abrir demonstração do projeto ${project.title}`,
+    }));
+    actions.appendChild(createActionLink({
+      href: getProjectDetailsUrl(project),
+      label: 'Ver detalhes',
+      className: 'project-action primary-link',
+      external: false,
+      ariaLabel: `Ver detalhes do projeto ${project.title}`,
+    }));
+    card.appendChild(actions);
 
     grid.appendChild(card);
   });
@@ -264,62 +702,65 @@ function renderStats() {
   if (!grid) return;
 
   stats.forEach((stat, index) => {
-    const card = document.createElement('div');
-    card.className = 'stat-card glass reveal';
-    card.style.setProperty('--delay', `${index * 100}ms`);
+    const card = createElement('div', 'stat-card glass reveal');
+    card.style.setProperty('--delay', `${index * 80}ms`);
 
-    const number = document.createElement('span');
-    number.className = 'stat-number';
+    const number = createElement('span', 'stat-number', '0');
     number.dataset.target = stat.number;
-    number.textContent = '0';
 
-    const label = document.createElement('span');
-    label.className = 'stat-label';
-    label.textContent = stat.label;
-
+    const label = createElement('span', 'stat-label', stat.label);
     card.appendChild(number);
     card.appendChild(label);
     grid.appendChild(card);
   });
 }
 
-function renderExperience() {
-  const list = document.getElementById('experienceList');
+function renderTimeline() {
+  const list = document.getElementById('timelineList');
   if (!list) return;
 
-  experience.forEach((item, index) => {
-    const entry = document.createElement('div');
-    entry.className = 'timeline-item reveal';
-    entry.style.setProperty('--delay', `${index * 120}ms`);
+  timeline.forEach((item, index) => {
+    const entry = createElement('div', 'timeline-item reveal');
+    entry.style.setProperty('--delay', `${index * 90}ms`);
 
-    const dot = document.createElement('div');
-    dot.className = 'timeline-dot';
+    entry.appendChild(createElement('div', 'timeline-dot'));
 
-    const content = document.createElement('div');
-    content.className = 'timeline-content glass';
+    const content = createElement('div', 'timeline-content glass');
+    content.appendChild(createElement('span', 'timeline-period', item.period));
+    content.appendChild(createElement('h3', null, item.title));
+    content.appendChild(createElement('p', null, item.description));
 
-    const period = document.createElement('span');
-    period.className = 'timeline-period';
-    period.textContent = item.period;
-
-    const title = document.createElement('h3');
-    title.textContent = item.title;
-
-    const desc = document.createElement('p');
-    desc.textContent = item.description;
-
-    content.appendChild(period);
-    content.appendChild(title);
-    content.appendChild(desc);
-
-    entry.appendChild(dot);
     entry.appendChild(content);
     list.appendChild(entry);
   });
 }
 
+function renderExperience() {
+  const grid = document.getElementById('experienceGrid');
+  if (!grid) return;
+
+  experience.forEach((item, index) => {
+    const card = createElement('article', 'experience-card card glass reveal');
+    card.style.setProperty('--delay', `${index * 80}ms`);
+
+    const meta = createElement('div', 'experience-meta');
+    meta.appendChild(createElement('span', null, item.period));
+    meta.appendChild(createElement('span', null, item.company));
+
+    card.appendChild(meta);
+    card.appendChild(createElement('h3', null, item.title));
+    card.appendChild(createElement('p', null, item.description));
+
+    const tags = createElement('div', 'experience-tags');
+    item.highlights.forEach((tag) => tags.appendChild(createElement('span', null, tag)));
+    card.appendChild(tags);
+
+    grid.appendChild(card);
+  });
+}
+
 // ========================================================================
-// EFEITO DE DIGITAÇÃO (HERO)
+// EFEITOS E INTERAÇÕES
 // ========================================================================
 
 function setupTypedEffect() {
@@ -335,48 +776,51 @@ function setupTypedEffect() {
 
     if (!deleting) {
       el.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
+      charIndex += 1;
       if (charIndex === current.length) {
         deleting = true;
-        setTimeout(tick, 1600);
+        setTimeout(tick, 1500);
         return;
       }
     } else {
       el.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
+      charIndex -= 1;
       if (charIndex === 0) {
         deleting = false;
         roleIndex = (roleIndex + 1) % typedRoles.length;
       }
     }
-    setTimeout(tick, deleting ? 35 : 65);
+
+    setTimeout(tick, deleting ? 34 : 58);
   }
+
   tick();
 }
-
-// ========================================================================
-// CONTADOR ANIMADO (STATS)
-// ========================================================================
 
 function animateCounter(el) {
   const raw = el.dataset.target;
   const match = raw.match(/(\d+)/);
+
   if (!match) {
     el.textContent = raw;
     return;
   }
+
   const targetNum = parseInt(match[1], 10);
-  const suffix = raw.replace(match[1], '');
+  const prefix = raw.slice(0, match.index);
+  const suffix = raw.slice(match.index + match[1].length);
   const duration = 1000;
   const start = performance.now();
 
   function step(now) {
     const progress = Math.min((now - start) / duration, 1);
-    const current = Math.floor(progress * targetNum);
-    el.textContent = `${current}${suffix}`;
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * targetNum);
+    el.textContent = `${prefix}${current}${suffix}`;
     if (progress < 1) requestAnimationFrame(step);
     else el.textContent = raw;
   }
+
   requestAnimationFrame(step);
 }
 
@@ -393,8 +837,9 @@ function setupStatsObserver() {
         }
       });
     },
-    { threshold: 0.4 }
+    { threshold: 0.45 }
   );
+
   statNumbers.forEach((el) => observer.observe(el));
 }
 
@@ -412,37 +857,40 @@ function setupSkillBarsObserver() {
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.25 }
   );
+
   fills.forEach((el) => observer.observe(el));
 }
 
-// ========================================================================
-// REVEAL ON SCROLL
-// ========================================================================
-
-function handleScrollReveal() {
+function setupScrollReveal() {
   const elements = document.querySelectorAll('.reveal');
-  const triggerBottom = window.innerHeight * 0.9;
+  if (!elements.length) return;
 
-  elements.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < triggerBottom) el.classList.add('visible');
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  );
+
+  elements.forEach((el) => observer.observe(el));
 }
-
-// ========================================================================
-// SCROLL SUAVE + BARRA DE PROGRESSO
-// ========================================================================
 
 function setupSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      const target = href ? document.querySelector(href) : null;
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 }
@@ -450,93 +898,77 @@ function setupSmoothScroll() {
 function setupScrollProgress() {
   const bar = document.getElementById('scrollBar');
   if (!bar) return;
-  window.addEventListener('scroll', () => {
-    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+  let ticking = false;
+
+  function update() {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
     bar.style.width = `${scrolled}%`;
-  });
-}
-
-// ========================================================================
-// CURSOR CUSTOMIZADO
-// ========================================================================
-
-function setupCustomCursor() {
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-  if (!dot || !ring || window.matchMedia('(pointer: coarse)').matches) {
-    if (dot) dot.style.display = 'none';
-    if (ring) ring.style.display = 'none';
-    return;
+    ticking = false;
   }
 
-  let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll('a, button, .project-card, .magnetic').forEach((el) => {
-    el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
-  });
+  update();
 }
-
-// ========================================================================
-// BOTÕES MAGNÉTICOS
-// ========================================================================
 
 function setupMagneticButtons() {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+
   document.querySelectorAll('.magnetic').forEach((btn) => {
-    btn.addEventListener('mousemove', (e) => {
+    if (btn.dataset.magneticBound === 'true') return;
+    btn.dataset.magneticBound = 'true';
+
+    btn.addEventListener('mousemove', (event) => {
       const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px)`;
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.16}px, ${y * 0.22}px)`;
     });
+
     btn.addEventListener('mouseleave', () => {
       btn.style.transform = 'translate(0, 0)';
     });
   });
 }
 
-// ========================================================================
-// TILT 3D NOS CARDS DE PROJETO
-// ========================================================================
-
 function setupTiltEffect() {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+
   document.querySelectorAll('.project-card').forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
+    card.addEventListener('mousemove', (event) => {
       const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = `perspective(800px) rotateX(${y * -8}deg) rotateY(${x * 8}deg) translateY(-6px)`;
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(900px) rotateX(${y * -7}deg) rotateY(${x * 7}deg) translateY(-8px)`;
     });
+
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+      card.style.transform = 'perspective(900px) rotateX(0) rotateY(0) translateY(0)';
     });
   });
 }
 
-// ========================================================================
-// PARTÍCULAS EM CANVAS (rede leve)
-// ========================================================================
-
 function setupParticles() {
   const canvas = document.getElementById('particles');
-  if (!canvas) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!canvas || reducedMotion) return;
+
   const ctx = canvas.getContext('2d');
   let particles = [];
-  let width, height;
+  let width = 0;
+  let height = 0;
+  let animationFrame;
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -544,38 +976,39 @@ function setupParticles() {
   }
 
   function createParticles() {
-    const count = Math.floor((width * height) / 18000);
+    const count = Math.min(70, Math.floor((width * height) / 22000));
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      r: Math.random() * 1.6 + 0.6,
+      vx: (Math.random() - 0.5) * 0.28,
+      vy: (Math.random() - 0.5) * 0.28,
+      r: Math.random() * 1.5 + 0.5,
     }));
   }
 
   function draw() {
     ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = 'rgba(139, 92, 246, 0.5)';
-    ctx.strokeStyle = 'rgba(139, 92, 246, 0.12)';
+    ctx.fillStyle = 'rgba(139, 92, 246, 0.48)';
+    ctx.strokeStyle = 'rgba(6, 182, 212, 0.11)';
 
-    particles.forEach((p) => {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
+    particles.forEach((particle) => {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+      if (particle.x < 0 || particle.x > width) particle.vx *= -1;
+      if (particle.y < 0 || particle.y > height) particle.vy *= -1;
 
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
       ctx.fill();
     });
 
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
+    for (let i = 0; i < particles.length; i += 1) {
+      for (let j = i + 1; j < particles.length; j += 1) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 110) {
+        if (dist < 118) {
+          ctx.globalAlpha = 1 - dist / 118;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
@@ -583,17 +1016,24 @@ function setupParticles() {
         }
       }
     }
-    requestAnimationFrame(draw);
+    ctx.globalAlpha = 1;
+    animationFrame = requestAnimationFrame(draw);
   }
 
   resize();
   createParticles();
   draw();
 
-  window.addEventListener('resize', () => {
-    resize();
-    createParticles();
-  });
+  window.addEventListener(
+    'resize',
+    () => {
+      cancelAnimationFrame(animationFrame);
+      resize();
+      createParticles();
+      draw();
+    },
+    { passive: true }
+  );
 }
 
 // ========================================================================
@@ -604,25 +1044,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  renderList(softSkills, 'softSkillsList');
-  renderSkillBars();
   renderStats();
+  renderTechStack();
+  renderSkillCategories();
   renderProjects();
+  renderTimeline();
   renderExperience();
-
-  document
-    .querySelectorAll('.section-header, .stat-card')
-    .forEach((el) => el.classList.add('reveal'));
-
-  handleScrollReveal();
-  window.addEventListener('scroll', handleScrollReveal);
 
   setupTypedEffect();
   setupStatsObserver();
   setupSkillBarsObserver();
+  setupScrollReveal();
   setupSmoothScroll();
   setupScrollProgress();
-  setupCustomCursor();
   setupMagneticButtons();
   setupParticles();
 });

@@ -2,211 +2,315 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Carlos Magno | Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfólio de Carlos Magno, estudante de Engenharia de Software.">
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Fonte Google -->
+  <title>Carlos Magno Silva | Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Carlos Magno Silva, Desenvolvedor Full Stack com projetos em React, Next.js, Flutter, Node.js, Firebase, APIs REST e dashboards responsivos." />
+  <meta name="author" content="Carlos Magno Silva" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060611" />
+  <link rel="canonical" href="https://portifolio-carlos-magno.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Carlos Magno Silva | Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Aplicações Web e Mobile modernas com React, Next.js, Flutter, Node.js e Firebase." />
+  <meta property="og:url" content="https://portifolio-carlos-magno.vercel.app/" />
+  <meta property="og:image" content="https://portifolio-carlos-magno.vercel.app/img/foto-carlos-magno.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carlos Magno Silva | Desenvolvedor Full Stack" />
+  <meta name="twitter:description" content="Portfólio profissional com projetos web, mobile, APIs, dashboards e sistemas completos." />
+  <meta name="twitter:image" content="https://portifolio-carlos-magno.vercel.app/img/foto-carlos-magno.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carlos Magno Silva",
+      "jobTitle": "Desenvolvedor Full Stack",
+      "url": "https://portifolio-carlos-magno.vercel.app/",
+      "image": "https://portifolio-carlos-magno.vercel.app/img/foto-carlos-magno.jpg",
+      "email": "mailto:carlosmagnos1005@gmail.com",
+      "telephone": "+55 62 99696-3978",
+      "sameAs": [
+        "https://github.com/CarlosMagn0",
+        "https://br.linkedin.com/in/carlos-magno-silva-7720232ba"
+      ],
+      "knowsAbout": [
+        "React",
+        "Next.js",
+        "Flutter",
+        "Node.js",
+        "Firebase",
+        "TypeScript",
+        "JavaScript",
+        "APIs REST",
+        "MySQL",
+        "Git"
+      ]
+    }
+  </script>
 </head>
 <body>
-<header class="topbar">
-  <div class="logo">CM</div>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-  <nav class="nav">
-    <a href="#hero">Início</a>
-    <a href="#about">Sobre</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#projects">Projetos</a>
-    <a href="#contact">Contato</a>
-  </nav>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+  </div>
 
-  <div class="topbar-actions">
-    <a
-      href="img/curriculo-carlos-magno.pdf"
-      class="btn cv-link"
-      target="_blank"
-      rel="noopener"
-    >
-      📁 Currículo
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="bg-blob bg-blob-1" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob-2" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#hero" aria-label="Voltar ao início">
+      <span class="logo-bracket">&lt;</span>CM<span class="logo-bracket">/&gt;</span>
     </a>
-  </div>
-</header>
 
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#about">Sobre</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projetos</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#experience">Experiência</a>
+      <a href="#contact">Contato</a>
+    </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <p class="hero-tag">Engenharia de Software</p>
-      <h1>Olá, eu sou o <span>Carlos Magno</span>.</h1>
-      <p class="hero-subtitle">
-        Estudante de Engenharia de Software (5º período), com experiência prática em
-        JavaScript, Flutter, bancos de dados e jogos 3D na Unity.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn primary">Ver projetos</a>
-        <a href="#contact" class="btn ghost">Fale comigo</a>
-      </div>
-      <div class="hero-tags">
-        <span>JavaScript</span>
-        <span>Flutter & Dart</span>
-        <span>Unity & C#</span>
-        <span>MySQL & Firebase</span>
-      </div>
+    <div class="topbar-actions">
+      <a href="img/curriculo-carlos-magno.pdf" class="btn cv-link magnetic" target="_blank" rel="noopener" aria-label="Baixar currículo de Carlos Magno">
+        <span aria-hidden="true">↓</span>
+        <span>Currículo</span>
+      </a>
     </div>
-   <div class="hero-photo-card">
-  <div class="hero-photo-placeholder">
-    <img
-      src="img/foto-carlos-magno.jpg"
-      alt="Foto de Carlos Magno"
-      class="hero-photo-img"
-    />
-  </div>
-  <p class="hero-photo-caption">
-    Carlos Magno<br />
-    <span>Estudante de Engenharia de Software</span>
-  </p>
-</div>
+  </header>
 
-  </section>
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="hero-content reveal">
+        <p class="hero-tag"><span class="dot-pulse" aria-hidden="true"></span> Disponível para trabalho e projetos</p>
+        <p class="hero-kicker">Carlos Magno Silva</p>
 
-  <!-- SOBRE -->
-  <section id="about" class="section">
-    <div class="section-header">
-      <h2>Sobre mim</h2>
-      <p>Quem eu sou, o que estudo e como posso contribuir.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-text card">
-        <p>
-          Estudante de <strong>Engenharia de Software</strong>, atualmente no 5º período, com
-          experiência em front-end, mobile e jogos digitais. Participei de projetos
-          acadêmicos e pessoais utilizando <strong>JavaScript, Flutter, Unity, MySQL e Firebase</strong>,
-          sempre aplicando boas práticas de programação e design.
-        </p>
-        <p>
-          Tenho perfil <strong>autodidata</strong>, gosto de aprender novas tecnologias e busco
-          constantemente evoluir minhas habilidades técnicas e contribuir com soluções
-          criativas, funcionais e focadas em experiência do usuário.
-        </p>
-      </div>
-      <div class="about-side">
-        <div class="about-item card">
-          <h3>Formação</h3>
-          <p><strong>Bacharelado em Engenharia de Software</strong></p>
-          <p>Universidade Evangélica de Goiás</p>
-          <p>2024 – 2027 (em andamento)</p>
-          <p>Atualmente no 5º período.</p>
+        <h1 class="hero-title">
+          Desenvolvedor <span class="gradient-text">Full Stack</span>
+        </h1>
+
+        <div class="terminal-line" aria-label="Especialidades em destaque">
+          <span class="terminal-prompt" aria-hidden="true">&gt;</span>
+          <span id="typed"></span><span class="cursor-blink" aria-hidden="true">|</span>
         </div>
-        <div class="about-item card">
-          <h3>Idiomas</h3>
-          <ul class="pill-list">
-            <li>Português – Nativo</li>
-            <li>Inglês – Básico</li>
-            <li>Espanhol – Básico</li>
-          </ul>
+
+        <p class="hero-subtitle">
+          Construo aplicações Web e Mobile modernas utilizando React, Next.js, Flutter, Node.js e Firebase.
+          Transformo requisitos em interfaces responsivas, APIs REST, dashboards e sistemas completos.
+        </p>
+
+        <ul class="hero-capabilities" aria-label="Tipos de solução que desenvolvo">
+          <li>Aplicações web</li>
+          <li>Aplicações mobile</li>
+          <li>APIs REST</li>
+          <li>Dashboards</li>
+          <li>Sistemas completos</li>
+        </ul>
+
+        <div class="hero-actions" aria-label="Ações principais">
+          <a href="#projects" class="btn primary magnetic">
+            <span aria-hidden="true">↗</span>
+            <span>Ver Projetos</span>
+          </a>
+          <a href="img/curriculo-carlos-magno.pdf" class="btn ghost magnetic" target="_blank" rel="noopener">
+            <span aria-hidden="true">↓</span>
+            <span>Download CV</span>
+          </a>
+          <a href="https://github.com/CarlosMagn0" class="btn icon-btn magnetic" target="_blank" rel="noopener" aria-label="Abrir GitHub de Carlos Magno">
+            <span aria-hidden="true">GitHub</span>
+          </a>
+          <a href="https://br.linkedin.com/in/carlos-magno-silva-7720232ba" class="btn icon-btn magnetic" target="_blank" rel="noopener" aria-label="Abrir LinkedIn de Carlos Magno">
+            <span aria-hidden="true">LinkedIn</span>
+          </a>
+          <a href="#contact" class="btn ghost magnetic">
+            <span aria-hidden="true">✦</span>
+            <span>Contato</span>
+          </a>
+        </div>
+
+        <div class="hero-tags" aria-label="Stack principal">
+          <span>React</span>
+          <span>Next.js</span>
+          <span>Flutter</span>
+          <span>Node.js</span>
+          <span>Firebase</span>
+          <span>TypeScript</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- HABILIDADES -->
-  <section id="skills" class="section section-alt">
-    <div class="section-header">
-      <h2>Habilidades</h2>
-      <p>Soft skills e tecnologias que utilizo no dia a dia.</p>
-    </div>
+      <div class="hero-visual reveal">
+        <div class="hero-photo-card">
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img src="img/foto-carlos-magno.jpg" alt="Foto profissional de Carlos Magno Silva" class="hero-photo-img" width="1104" height="1472" fetchpriority="high" decoding="async" />
+          </div>
+          <div class="profile-mini-card availability-card glass">
+            <span class="status-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Disponível para trabalho</strong>
+              <span>Full Stack Developer</span>
+            </div>
+          </div>
+          <p class="hero-photo-caption">
+            Carlos Magno<br />
+            <span>Engenharia de Software</span>
+          </p>
+        </div>
 
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Competências interpessoais</h3>
-        <ul class="tag-list" id="softSkillsList">
-          <!-- preenchido via JavaScript -->
-        </ul>
+        <div class="floating-badge badge-1">
+          <span aria-hidden="true">⚡</span> Full Stack
+        </div>
+        <div class="floating-badge badge-2">
+          <span aria-hidden="true">▣</span> Mobile Apps
+        </div>
+        <div class="floating-badge badge-3">
+          <span aria-hidden="true">API</span> REST
+        </div>
       </div>
-      <div class="card">
-        <h3>Tecnologias</h3>
-        <ul class="tag-list" id="techSkillsList">
-          <!-- preenchido via JavaScript -->
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Metodologias e práticas</h3>
-        <ul class="tag-list">
-          <li>Scrum</li>
-          <li>Kanban</li>
-          <li>Git & GitHub</li>
-          <li>Boas práticas de código</li>
-          <li>Trabalho colaborativo</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJETOS -->
-  <section id="projects" class="section">
-    <div class="section-header">
-      <h2>Projetos</h2>
-      <p>Alguns projetos acadêmicos e pessoais em que tive atuação.</p>
-    </div>
+    <section class="stats-section" aria-label="Estatísticas profissionais">
+      <div id="statsGrid" class="stats-grid"></div>
+    </section>
 
-    <div id="projectsGrid" class="projects-grid">
-      <!-- preenchido via JavaScript -->
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contact" class="section section-alt">
-    <div class="section-header">
-      <h2>Contato</h2>
-      <p>Quer conversar sobre uma vaga, projeto ou estágio?</p>
-    </div>
-    <div class="contact-card card">
-      <p>
-        Estou aberto a oportunidades como estagiário ou desenvolvedor júnior em
-        desenvolvimento web, mobile ou jogos.
-      </p>
-<div class="contact-row">
-  <span>📞</span>
-  <a href="tel:+5562996963978">(62) 99696-3978</a>
-</div>
-
-<div class="contact-row">
-  <span>💬</span>
-  <a 
-    href="https://wa.me/5562996963978" 
-    target="_blank" 
-    rel="noopener"
-  >
-    Conversar no WhatsApp
-  </a>
-</div>
-
-      <div class="contact-row">
-        <span>📧</span>
-        <a href="mailto:carlosmagnos1005@gmail.com">carlosmagnos1005@gmail.com</a>
+    <section id="about" class="section">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">01 — Sobre</span>
+        <h2>Perfil profissional</h2>
+        <p>Engenharia, produto e execução prática para criar software com acabamento real.</p>
       </div>
-      <div class="contact-row">
-        <span>💼</span>
-        <a href="https://br.linkedin.com/in/carlos-magno-silva-7720232ba?trk=people-guest_people_search-card" target="_blank" rel="noopener">
-          LinkedIn
-        </a>
+
+      <div class="about-grid">
+        <div class="about-text card glass reveal">
+          <p>
+            Sou Desenvolvedor Full Stack em formação em <strong>Engenharia de Software</strong>, com foco em construir produtos digitais funcionais, responsivos e prontos para uso real. Trabalho com <strong>React, Next.js, Flutter, Node.js, Firebase, APIs REST, MySQL e Git</strong>, unindo visão de interface, arquitetura e entrega.
+          </p>
+          <p>
+            Minha experiência vem de projetos próprios, acadêmicos e para clientes, incluindo aplicativos publicados, landing pages, sistemas interativos, dashboards e soluções mobile. Atuo desde o entendimento do problema até a implementação, integração, responsividade e refinamento de UX.
+          </p>
+          <p>
+            Busco oportunidades em times que valorizem código bem estruturado, aprendizado contínuo e impacto prático. Meu objetivo é contribuir com soluções claras, escaláveis e úteis para pessoas e negócios.
+          </p>
+          <div class="about-tags">
+            <span>Arquitetura de software</span>
+            <span>Produtos reais</span>
+            <span>UI/UX aplicado</span>
+            <span>Boas práticas</span>
+          </div>
+        </div>
+
+        <div class="about-side">
+          <div class="about-item card glass reveal">
+            <h3><span class="icon-box" aria-hidden="true">🎓</span> Formação</h3>
+            <p><strong>Bacharelado em Engenharia de Software</strong></p>
+            <p>Universidade Evangélica de Goiás</p>
+            <p>2024 – 2027 (em andamento) · 5º período</p>
+          </div>
+          <div class="about-item card glass reveal">
+            <h3><span class="icon-box" aria-hidden="true">🌐</span> Idiomas</h3>
+            <ul class="pill-list">
+              <li>Português — Nativo</li>
+              <li>Inglês — Básico</li>
+              <li>Espanhol — Básico</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="contact-row">
-        <span>👨‍💻</span>
-        <a href="https://github.com/CarlosMagn0" target="_blank" rel="noopener">
-          GitHub 
-        </a>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">02 — Habilidades</span>
+        <h2>Stack organizada por domínio</h2>
+        <p>Tecnologias, ferramentas e práticas que aplico em interfaces, mobile, back-end, cloud e entrega.</p>
       </div>
-    </div>
-  </section>
+
+      <div id="techStackGrid" class="tech-stack-grid" aria-label="Tecnologias principais"></div>
+      <div id="skillCategoriesGrid" class="skill-category-grid"></div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">03 — Projetos</span>
+        <h2>Projetos com contexto, stack e impacto</h2>
+        <p>Aplicações web, mobile, landing pages, jogos e sistemas com atuação direta no desenvolvimento.</p>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid"></div>
+    </section>
+
+    <section id="timeline" class="section section-alt">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">04 — Timeline</span>
+        <h2>Evolução técnica</h2>
+        <p>Uma linha do tempo objetiva dos principais marcos da minha trajetória em software.</p>
+      </div>
+      <div id="timelineList" class="timeline"></div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">05 — Experiência</span>
+        <h2>Experiência prática</h2>
+        <p>Projetos pessoais, acadêmicos e entregas para clientes apresentados como vivência profissional aplicada.</p>
+      </div>
+      <div id="experienceGrid" class="experience-grid"></div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">06 — Contato</span>
+        <h2>Vamos construir algo?</h2>
+        <p>Aberto a vagas, estágio, freelance, colaboração técnica e projetos full stack.</p>
+      </div>
+
+      <div class="contact-panel card glass reveal">
+        <div class="contact-copy">
+          <h3>Disponível para oportunidades</h3>
+          <p>
+            Se você procura alguém com base técnica, senso de produto e cuidado com experiência do usuário, estou pronto para conversar sobre como posso contribuir.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-row magnetic" href="tel:+5562996963978" aria-label="Ligar para Carlos Magno">
+            <span class="icon-box" aria-hidden="true">☎</span> (62) 99696-3978
+          </a>
+          <a class="contact-row magnetic" href="https://wa.me/5562996963978" target="_blank" rel="noopener" aria-label="Conversar com Carlos Magno no WhatsApp">
+            <span class="icon-box" aria-hidden="true">◌</span> WhatsApp
+          </a>
+          <a class="contact-row magnetic" href="mailto:carlosmagnos1005@gmail.com" aria-label="Enviar e-mail para Carlos Magno">
+            <span class="icon-box" aria-hidden="true">@</span> carlosmagnos1005@gmail.com
+          </a>
+          <a class="contact-row magnetic" href="https://br.linkedin.com/in/carlos-magno-silva-7720232ba" target="_blank" rel="noopener" aria-label="Abrir LinkedIn de Carlos Magno">
+            <span class="icon-box" aria-hidden="true">in</span> LinkedIn
+          </a>
+          <a class="contact-row magnetic" href="https://github.com/CarlosMagn0" target="_blank" rel="noopener" aria-label="Abrir GitHub de Carlos Magno">
+            <span class="icon-box" aria-hidden="true">gh</span> GitHub
+          </a>
+          <a class="contact-row magnetic" href="img/curriculo-carlos-magno.pdf" target="_blank" rel="noopener" aria-label="Baixar currículo de Carlos Magno">
+            <span class="icon-box" aria-hidden="true">↓</span> Currículo
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Carlos Magno — Portfólio.</p>
+    <p>© <span id="year"></span> Carlos Magno Silva — Portfólio Full Stack.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

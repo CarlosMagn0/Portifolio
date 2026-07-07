@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projeto | Carlos Magno Silva</title>
+  <meta name="description" content="Detalhes de projeto do portfólio de Carlos Magno Silva: problema, solução, tecnologias, arquitetura, galeria, desafios e aprendizados." />
+  <meta name="author" content="Carlos Magno Silva" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#060611" />
+  <link rel="canonical" href="https://portifolio-carlos-magno.vercel.app/project.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Projeto | Carlos Magno Silva" />
+  <meta property="og:description" content="Estudo de caso com contexto, stack, arquitetura e aprendizados." />
+  <meta property="og:url" content="https://portifolio-carlos-magno.vercel.app/project.html" />
+  <meta property="og:image" content="https://portifolio-carlos-magno.vercel.app/img/foto-carlos-magno.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projeto | Carlos Magno Silva" />
+  <meta name="twitter:description" content="Detalhes técnicos e de produto de um projeto do portfólio." />
+  <meta name="twitter:image" content="https://portifolio-carlos-magno.vercel.app/img/foto-carlos-magno.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+  </div>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="bg-blob bg-blob-1" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob-2" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo" href="index.html#hero" aria-label="Voltar ao início do portfólio">
+      <span class="logo-bracket">&lt;</span>CM<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação do portfólio">
+      <a href="index.html#about">Sobre</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projetos</a>
+      <a href="index.html#contact">Contato</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <a href="index.html#projects" class="btn cv-link magnetic">
+        <span aria-hidden="true">←</span>
+        <span>Projetos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="projectDetail" class="project-detail section"></section>
+    <section class="section section-alt">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Mais projetos</span>
+        <h2>Continue explorando</h2>
+        <p>Outros trabalhos com stack, contexto e execução prática.</p>
+      </div>
+      <div id="relatedProjects" class="related-projects-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlos Magno Silva — Estudo de caso.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="project.js" defer></script>
+</body>
+</html>
