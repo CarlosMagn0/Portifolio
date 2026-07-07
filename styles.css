@@ -713,10 +713,16 @@ button:focus-visible {
   gap: 22px;
 }
 
+.about-text,
+.about-side {
+  min-width: 0;
+}
+
 .about-text p {
   margin: 0 0 14px;
   color: var(--muted);
   line-height: 1.72;
+  overflow-wrap: break-word;
 }
 
 .about-text p:last-of-type {
@@ -1620,6 +1626,7 @@ button:focus-visible {
   }
 
   .stats-grid,
+  .about-grid,
   .skill-category-grid,
   .experience-grid,
   .contact-panel,
