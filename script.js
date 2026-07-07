@@ -151,7 +151,8 @@ const projects = [
     ],
     metrics: ['Estoque crítico', 'Margem em tempo real', 'Simulação de precificação'],
     github: 'https://github.com/CarlosMagn0/Gerenciamento',
-    demo: null,
+    demo: 'https://github.com/CarlosMagn0/Gerenciamento/releases/tag/v1.0.0',
+    demoLabel: 'Demo Android',
     image: 'img/logo-lumio.png',
     gallery: ['img/logo-lumio.png'],
     featured: true,
@@ -161,7 +162,7 @@ const projects = [
     title: 'Missão Dengue Zero – Jogo 3D',
     category: 'Game / Educação',
     role: 'Game Developer',
-    year: '2024',
+    year: '2025',
     status: 'Publicado',
     tags: ['Unity', 'C#', 'Android', 'Google Play'],
     description:
@@ -197,7 +198,7 @@ const projects = [
     title: 'DengCheck – App de combate à dengue',
     category: 'Mobile / Saúde pública',
     role: 'Mobile Developer (colaboração)',
-    year: '2024',
+    year: '2025',
     status: 'Publicado',
     tags: ['Flutter', 'Android', 'iOS', 'Mobile', 'Google Play'],
     description:
@@ -233,7 +234,7 @@ const projects = [
     title: 'Recomeçar – Plataforma Mobile de Acompanhamento',
     category: 'Mobile / UI',
     role: 'Mobile Developer',
-    year: '2024',
+    year: '2025',
     status: 'Publicado',
     tags: ['Flutter', 'Dart', 'Android', 'UI/UX'],
     description:
@@ -269,7 +270,7 @@ const projects = [
     title: 'MsTech – Site Profissional de Serviços de TI',
     category: 'Web / Institucional',
     role: 'Front-end Developer & UI Designer',
-    year: '2025',
+    year: '2026',
     status: 'Online',
     tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX', 'Responsivo'],
     description:
@@ -341,7 +342,7 @@ const projects = [
     title: 'TaskBoard – Sistema Interativo de Produtividade',
     category: 'Web App / Produtividade',
     role: 'Front-end Developer',
-    year: '2025',
+    year: '2026',
     status: 'Online',
     tags: ['JavaScript', 'HTML', 'CSS', 'CRUD', 'LocalStorage'],
     description:
@@ -377,7 +378,7 @@ const projects = [
     title: 'Sistema acadêmico com MySQL',
     category: 'Banco de Dados',
     role: 'Database Developer (acadêmico)',
-    year: '2024',
+    year: '2025',
     status: 'Código privado',
     tags: ['MySQL', 'Modelagem de dados', 'SQL', 'Relatórios'],
     description:
