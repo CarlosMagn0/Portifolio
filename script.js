@@ -12,7 +12,11 @@ const contactLinks = {
 
 const techIcons = {
   React: 'https://cdn.simpleicons.org/react/61DAFB',
+  Angular: 'https://cdn.simpleicons.org/angular/DD0031',
   'Next.js': 'https://cdn.simpleicons.org/nextdotjs/FFFFFF',
+  'C#': 'https://cdn.simpleicons.org/sharp/9B4F96',
+  '.NET': 'https://cdn.simpleicons.org/dotnet/512BD4',
+  Docker: 'https://cdn.simpleicons.org/docker/2496ED',
   TypeScript: 'https://cdn.simpleicons.org/typescript/3178C6',
   JavaScript: 'https://cdn.simpleicons.org/javascript/F7DF1E',
   HTML5: 'https://cdn.simpleicons.org/html5/E34F26',
@@ -30,6 +34,10 @@ const techIcons = {
 };
 
 const featuredTech = [
+  { name: 'C#', icon: techIcons['C#'] },
+  { name: '.NET', icon: techIcons['.NET'] },
+  { name: 'Angular', icon: techIcons.Angular },
+  { name: 'Docker', icon: techIcons.Docker },
   { name: 'React', icon: techIcons.React },
   { name: 'Next.js', icon: techIcons['Next.js'] },
   { name: 'Node.js', icon: techIcons['Node.js'] },
@@ -50,6 +58,7 @@ const skillCategories = [
     description: 'Interfaces responsivas, acessíveis e orientadas à experiência do usuário.',
     skills: [
       { name: 'React', level: 82 },
+      { name: 'Angular', level: 68 },
       { name: 'Next.js', level: 72 },
       { name: 'TypeScript', level: 74 },
       { name: 'JavaScript', level: 86 },
@@ -62,9 +71,12 @@ const skillCategories = [
     description: 'APIs, regras de negócio, autenticação e integrações com banco de dados.',
     skills: [
       { name: 'Node.js', level: 70 },
+      { name: 'C#', level: 72 },
+      { name: '.NET / ASP.NET Core', level: 68 },
       { name: 'APIs REST', level: 76 },
+      { name: 'Entity Framework Core', level: 64 },
+      { name: 'Orientação a Objetos', level: 76 },
       { name: 'Autenticação', level: 72 },
-      { name: 'Arquitetura', level: 74 },
     ],
   },
   {
@@ -84,6 +96,8 @@ const skillCategories = [
       { name: 'Firebase', level: 82 },
       { name: 'Cloud Firestore', level: 80 },
       { name: 'MySQL', level: 76 },
+      { name: 'SQL', level: 78 },
+      { name: 'Modelagem relacional', level: 74 },
       { name: 'Hive', level: 78 },
     ],
   },
@@ -95,6 +109,8 @@ const skillCategories = [
       { name: 'GitHub', level: 84 },
       { name: 'Vercel', level: 78 },
       { name: 'Figma', level: 72 },
+      { name: 'VS Code / Visual Studio', level: 80 },
+      { name: 'Docker', level: 66 },
     ],
   },
   {
@@ -105,6 +121,19 @@ const skillCategories = [
       { name: 'Firebase Auth', level: 74 },
       { name: 'Firestore Rules', level: 72 },
       { name: 'Deploy Web', level: 82 },
+      { name: 'Containers Docker', level: 66 },
+    ],
+  },
+  {
+    title: 'Qualidade e Fundamentos',
+    description: 'Base necessária para evoluir código com segurança, clareza e manutenção simples.',
+    skills: [
+      { name: 'Lógica de Programação', level: 84 },
+      { name: 'Clean Code', level: 80 },
+      { name: 'Testes Unitários', level: 66 },
+      { name: 'Debug e tratamento de erros', level: 76 },
+      { name: 'HTTP e consumo de APIs', level: 78 },
+      { name: 'Responsividade e Acessibilidade', level: 84 },
     ],
   },
   {
@@ -115,6 +144,8 @@ const skillCategories = [
       { name: 'Kanban', level: 78 },
       { name: 'Clean Code', level: 80 },
       { name: 'Code Review', level: 72 },
+      { name: 'Comunicação em equipe', level: 82 },
+      { name: 'Documentação técnica', level: 74 },
     ],
   },
 ];
@@ -413,7 +444,7 @@ const projects = [
 
 const stats = [
   { number: '+10', label: 'Projetos e entregas' },
-  { number: '+5', label: 'Tecnologias principais' },
+  { number: '+16', label: 'Tecnologias e competências' },
   { number: '100%', label: 'Responsivo e acessível' },
   { number: 'GitHub', label: 'Ativo e em evolução' },
 ];
@@ -442,11 +473,19 @@ const timeline = [
   {
     period: 'Hoje',
     title: 'Portfólio internacional e evolução contínua',
-    description: 'Foco em React, Next.js, Node.js, arquitetura, UX e experiências completas de produto.',
+    description: 'Evolução em C#/.NET, ASP.NET Core, Angular, React, Node.js, arquitetura, testes e experiências completas de produto.',
   },
 ];
 
 const experience = [
+  {
+    title: 'Desenvolvimento Full Stack Web',
+    company: 'Estudos e projetos práticos',
+    period: 'Em evolução contínua',
+    description:
+      'Desenvolvimento de interfaces com Angular e serviços back-end com C#/.NET e ASP.NET Core, aplicando orientação a objetos, APIs REST, integração com bancos SQL, organização em camadas e ambientes com Docker.',
+    highlights: ['C#', '.NET', 'ASP.NET Core', 'Angular', 'Docker', 'APIs REST', 'SQL'],
+  },
   {
     title: 'Desenvolvimento Full Stack Mobile',
     company: 'Projetos próprios',
@@ -482,6 +521,9 @@ const experience = [
 ];
 
 const typedRoles = [
+  'C# • .NET • ASP.NET Core',
+  'Docker • Containers • Ambientes consistentes',
+  'Angular • TypeScript • Interfaces responsivas',
   'React • Next.js • TypeScript',
   'Flutter • Firebase • Mobile Apps',
   'Node.js • APIs REST • Dashboards',
