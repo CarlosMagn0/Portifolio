@@ -399,7 +399,7 @@ const projects = [
     ],
     metrics: ['CRUD completo', 'Busca em tempo real', 'Persistência local'],
     github: null,
-    demo: 'https://task-board-1bexhbjz3-carlos-magnos-projects-389ad41d.vercel.app/',
+    demo: 'https://task-board-ruby-two.vercel.app/',
     demoLabel: 'Demo',
     image: 'img/taskboard.png',
     gallery: ['img/taskboard.png'],
