@@ -192,8 +192,15 @@ const projects = [
     github: null,
     demo: 'https://fixaliza.com/',
     demoLabel: 'Acessar Fixaliza',
-    image: 'img/fixaliza-market-desktop.png',
-    gallery: ['img/fixaliza-market-desktop.png', 'img/fixaliza-market-mobile.png'],
+    image: 'img/fixaliza-home-hero.png',
+    gallery: [
+      'img/fixaliza-home-hero.png',
+      'img/fixaliza-diretorio.png',
+      'img/fixaliza-segmentos.png',
+      'img/fixaliza-como-funciona.png',
+      'img/fixaliza-endereco.png',
+      'img/fixaliza-planos.png',
+    ],
     featured: true,
   },
   {
