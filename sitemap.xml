@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://portifolio-carlos-magno.vercel.app/project.html?id=fixaliza</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://portifolio-carlos-magno.vercel.app/project.html?id=missao-dengue-zero</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>

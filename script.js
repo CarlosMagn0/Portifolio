@@ -152,6 +152,51 @@ const skillCategories = [
 
 const projects = [
   {
+    id: 'fixaliza',
+    title: 'Fixaliza – Presença Digital para Negócios Locais',
+    category: 'SaaS / Full Stack',
+    role: 'Desenvolvedor Full Stack',
+    year: '2026',
+    status: 'Plataforma em evolução',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'NextAuth', 'TanStack Query', 'Zod', 'Stripe', 'API REST', 'Multi-tenant'],
+    description:
+      'Plataforma SaaS que ajuda negócios locais a criar e administrar uma vitrine digital própria. Reúne páginas públicas por estabelecimento, catálogo de produtos e ofertas, diretório para descoberta de comércios e ferramentas de gestão de conteúdo, publicação e assinatura.',
+    problem:
+      'Pequenos negócios precisam divulgar produtos, ofertas, horários e contatos online, mas muitas vezes dependem de redes sociais ou ferramentas difíceis de atualizar e sem uma página própria organizada.',
+    solution:
+      'Desenvolvi o Fixaliza como uma plataforma multi-tenant: cada negócio configura sua identidade e conteúdo em um painel e publica uma página responsiva em um endereço próprio. Clientes podem encontrar estabelecimentos pelo diretório e acessar informações e canais de contato diretamente.',
+    architecture: [
+      'Aplicação web construída com Next.js, React, TypeScript e Tailwind CSS, com interface responsiva e componentes reutilizáveis.',
+      'Páginas públicas dinâmicas para cada estabelecimento, resolvidas por slug e domínio, com identidade, informações, produtos, ofertas, imagens e contato.',
+      'Painel de gestão para editar identidade visual e conteúdo, organizar produtos e ofertas, acompanhar uma prévia ao vivo e publicar a página.',
+      'Diretório público de negócios e segmentos para descoberta de estabelecimentos.',
+      'Integração com API REST, contexto de tenant, autenticação NextAuth e consultas com TanStack Query; formulários validados com React Hook Form e Zod.',
+      'Recursos comerciais organizados por plano, com assinaturas e fluxo de cobrança integrado ao Stripe.',
+      'Painel administrativo separado para gestão da plataforma, com controle de acesso para administradores e gestão de estabelecimentos, usuários, planos e segmentos.',
+    ],
+    challenges: [
+      'Separar os dados e o contexto de cada negócio em uma experiência multi-tenant, mantendo páginas públicas acessíveis por endereço próprio.',
+      'Equilibrar liberdade de personalização com uma estrutura consistente, responsiva e fácil de manter.',
+      'Sincronizar edição, prévia e publicação para que o responsável veja como as mudanças aparecem na página pública.',
+      'Conectar autenticação, permissões, regras de plano e cobrança sem tratar validações de interface como substitutas das validações do backend.',
+      'Manter os fluxos de gestão simples para pessoas sem conhecimento técnico.',
+    ],
+    learnings: [
+      'Arquitetura de produto SaaS multi-tenant, com separação entre páginas públicas, painel dos estabelecimentos e administração da plataforma.',
+      'Integração de aplicações Next.js com API autenticada, contexto de tenant e consultas remotas.',
+      'Construção de fluxos de assinatura, troca de plano e retorno de checkout usando Stripe.',
+      'Importância de prévia ao vivo, limites de plano e feedback claro em ferramentas de publicação.',
+      'SEO, páginas dinâmicas e experiência mobile para negócios que dependem de descoberta local.',
+    ],
+    metrics: ['Páginas próprias por negócio', 'Diretório de estabelecimentos', 'Painel de gestão e publicação', 'Assinaturas via Stripe'],
+    github: null,
+    demo: 'https://fixaliza.com/',
+    demoLabel: 'Acessar Fixaliza',
+    image: 'img/fixaliza-market-desktop.png',
+    gallery: ['img/fixaliza-market-desktop.png', 'img/fixaliza-market-mobile.png'],
+    featured: true,
+  },
+  {
     id: 'lumio',
     title: 'Lumio – Gestão Inteligente de Produtos e Finanças',
     category: 'Mobile / Full Stack',
