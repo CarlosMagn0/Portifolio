@@ -105,6 +105,7 @@ function renderProjectDetail(project) {
     const img = document.createElement('img');
     img.src = project.image;
     img.alt = `Imagem principal do projeto ${project.title}`;
+    img.style.objectFit = project.imageFit || 'cover';
     img.loading = 'eager';
     img.decoding = 'async';
     media.appendChild(img);
@@ -162,6 +163,7 @@ function renderProjectDetail(project) {
       const img = document.createElement('img');
       img.src = src;
       img.alt = `Print do projeto ${project.title}`;
+      img.style.objectFit = project.imageFit || 'cover';
       img.loading = 'lazy';
       img.decoding = 'async';
       item.appendChild(img);

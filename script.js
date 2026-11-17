@@ -314,14 +314,14 @@ const projects = [
   },
   {
     id: 'recomecar',
-    title: 'Recomeçar – Plataforma Mobile de Acompanhamento',
+    title: 'Bye Bye Depre 💙 – Plataforma Mobile de Acompanhamento',
     category: 'Mobile / UI',
     role: 'Mobile Developer',
     year: '2025',
     status: 'Publicado',
     tags: ['Flutter', 'Dart', 'Android', 'UI/UX'],
     description:
-      'Aplicativo mobile em Flutter com foco em performance, usabilidade e design centrado no usuário para acompanhamento de jornada.',
+      'Bye Bye Depre é um aplicativo mobile em Flutter com foco em performance, usabilidade e design centrado no usuário para acompanhamento de jornada.',
     problem:
       'Usuários precisam de acompanhamento claro e acessível em uma jornada que exige continuidade e orientação.',
     solution:
@@ -345,8 +345,9 @@ const projects = [
     github: null,
     demo: 'https://play.google.com/store/apps/details?id=com.mindeleve.recomecarapp',
     demoLabel: 'Google Play',
-    image: 'img/recomecar.webp',
-    gallery: ['img/recomecar.webp'],
+    image: 'img/bye-bye-depre.webp',
+    gallery: ['img/bye-bye-depre.webp'],
+    imageFit: 'contain',
   },
   {
     id: 'mstech',
@@ -734,6 +735,7 @@ function renderProjects() {
       image.src = project.image;
       image.alt = `Imagem do projeto ${project.title}`;
       image.className = 'project-thumb';
+      image.style.objectFit = project.imageFit || 'cover';
       image.loading = index < 2 ? 'eager' : 'lazy';
       image.decoding = 'async';
       imageWrap.appendChild(image);
