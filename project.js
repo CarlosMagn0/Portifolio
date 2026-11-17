@@ -101,6 +101,7 @@ function renderProjectDetail(project) {
   copy.appendChild(actions);
 
   const media = createElement('div', 'project-detail-media');
+  media.style.aspectRatio = project.imageAspectRatio || '16 / 11';
   if (project.image) {
     const img = document.createElement('img');
     img.src = project.image;
@@ -160,6 +161,7 @@ function renderProjectDetail(project) {
   if (project.gallery.length) {
     project.gallery.forEach((src) => {
       const item = createElement('div', 'gallery-item');
+      item.style.aspectRatio = project.imageAspectRatio || '16 / 10';
       const img = document.createElement('img');
       img.src = src;
       img.alt = `Print do projeto ${project.title}`;

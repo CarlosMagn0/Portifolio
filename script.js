@@ -348,6 +348,7 @@ const projects = [
     image: 'img/bye-bye-depre.webp',
     gallery: ['img/bye-bye-depre.webp'],
     imageFit: 'contain',
+    imageAspectRatio: '1 / 1',
   },
   {
     id: 'mstech',
@@ -730,6 +731,7 @@ function renderProjects() {
     }
 
     const imageWrap = createElement('div', 'project-thumb-wrap');
+    imageWrap.style.aspectRatio = project.imageAspectRatio || '16 / 10';
     if (project.image) {
       const image = document.createElement('img');
       image.src = project.image;
